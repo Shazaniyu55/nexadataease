@@ -49,8 +49,8 @@ export default function Projects() {
             eyebrow="Consumer app · Mobility"
             name="TruBook Driver"
             status="In production"
-            description="The API layer behind DataEase's bill-payment features, integrating with upstream VTU providers to process transactions reliably."
-            points={["VTU transaction processing", "Provider integrations (VTpass)"]}
+            description="TruBook is a marketplace for interstate trips. Passengers post where they're going and when; drivers list vehicles and routes and pick up matching requests."
+            points={["Trip request board", "Driver & vehicle management", "Route & district matching"]}
             detailHref="/projects/dataease-backend"
             appUrl="https://play.google.com/store/apps/details?id=com.trubooker.drivers&pcampaignid=web_share"
              image="/images/unnamed.png"

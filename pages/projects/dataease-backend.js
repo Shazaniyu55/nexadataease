@@ -5,17 +5,17 @@ export default function DataEaseBackend() {
     <ProductDetail
       accent="bronze"
       eyebrow="Infrastructure · API"
-      name="DataEase Backend"
+      name="TrueBooker Driver"
       status="In production"
-      tagline="The VTU and payments API powering DataEase."
-      description="DataEase Backend is the API layer behind DataEase's bill-payment features. It integrates with upstream VTU providers — currently VTpass — to process airtime, mobile data, cable TV and electricity transactions, and is built to be dependable enough that every consumer-facing product in the portfolio can rely on it. It's infrastructure rather than a product people see directly, but it's what makes the rest of the portfolio possible."
-      features={[
-        "VTU transaction processing",
-        "VTpass provider integration",
-        "Built for reliability at scale",
-        "NestJS / TypeScript",
+      tagline="TruBook is a marketplace for interstate trips. Passengers post where they're going and when; drivers list vehicles and routes and pick up matching requests."
+                  description="TruBook is a marketplace for interstate trips. Passengers post where they're going and when; drivers list vehicles and routes and pick up matching requests."
+            features={["Trip request board", "Driver & vehicle management", "Route & district matching"]}
+
+      appUrl="https://play.google.com/store/apps/details?id=com.trubooker.drivers&pcampaignid=web_share"
+        screenshots={[
+        "/images/tru1.jpg",
+        "/images/tru2.jpg",
       ]}
-      appUrl="#"
     />
   );
 }
