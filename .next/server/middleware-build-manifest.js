@@ -24,10 +24,10 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/projects/dataease-backend": [
+    "/contact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/projects/dataease-backend.js"
+      "static/chunks/pages/contact.js"
     ]
   },
   "ampFirstPages": []

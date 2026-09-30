@@ -46,7 +46,7 @@ export default function Contact() {
             </dl>
           </div>
 
-          <form className="h-fit space-y-5 border-l-4 border-green bg-white p-6 sm:p-8" action="mailto:info@nexadataease.com" method="post" encType="text/plain">
+          <form className="h-fit space-y-5 border-l-4 border-green bg-white p-6 sm:p-8" action="https://formspree.io/f/xppwnjkk" method="post">
             <div>
               <label htmlFor="name" className="text-xs uppercase tracking-wide text-ink/45">Name</label>
               <input id="name" name="name" type="text" required className="mt-2 w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-navy" />
