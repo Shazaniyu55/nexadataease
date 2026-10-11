@@ -19,7 +19,7 @@ export default function Contact() {
 
             <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden">
               <Image
-                src="/images/logo-full.png"
+                src="/images/Friendly.png"
                 alt="Shazaniyu Gbadamosi, Founder & CEO of NexaDataEase"
                 fill
                 className="w-30 h-30 object-cover"
