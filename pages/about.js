@@ -16,7 +16,7 @@ export default function About() {
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:px-8 md:grid-cols-[1fr_1.3fr] md:gap-16">
           <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden">
                       <Image
-                        src="/images/logo-full.png"
+                        src="/images/about2.png"
                         alt="Shazaniyu Gbadamosi, Founder & CEO of NexaDataEase"
                         fill
                         className="w-30 h-30 object-cover"
