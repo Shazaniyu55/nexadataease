@@ -5,7 +5,7 @@ import ImagePlaceholder from "../components/ImagePlaceholder";
 const TEAM = [
   { name: "Shazaniyu Gbadamosi", role: "Founder & CEO", photo: "/team/ceo.jpeg" },
   { name: "Balikis (Enakhe) Gbadamosi", role: "Secretary ", photo: null ,photo: "/team/becky.png"},
-    { name: "MK ", role: "Public relation officer ", photo: null ,photo: "/team/pro.jpeg"},
+    // { name: "MK ", role: "Public relation officer ", photo: null ,photo: "/team/pro.jpeg"},
 
 ];
 
