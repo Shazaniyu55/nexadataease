@@ -39,22 +39,34 @@ export default function ProductDetail({
       </section>
 
       <section className="mx-auto max-w-6xl px-5 pb-16 sm:px-8">
-        {screenshots.length > 0 ? (
-          <div className="grid gap-4 sm:grid-cols-3">
-            {screenshots.map((src, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden border border-line">
-                <Image src={src} alt={`${name} screenshot ${i + 1}`} fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <ImagePlaceholder key={i} label={`${name} screenshot ${i} — add when ready`} />
-            ))}
-          </div>
-        )}
-      </section>
+  {screenshots.length > 0 ? (
+    <div className="grid grid-cols-1 gap-6">
+      {screenshots.map((src, i) => (
+        <div
+          key={i}
+          className="relative aspect-[1024/500] w-full overflow-hidden border border-line"
+        >
+          <Image
+            src={src}
+            alt={`${name} screenshot ${i + 1}`}
+            fill
+            sizes="(min-width: 1152px) 1088px, calc(100vw - 40px)"
+            className="object-contain"
+          />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div className="grid grid-cols-1 gap-6">
+      {[1, 2, 3].map((i) => (
+        <ImagePlaceholder
+          key={i}
+          label={`${name} screenshot ${i} — add when ready`}
+        />
+      ))}
+    </div>
+  )}
+</section>
 
       <section className="border-t border-line bg-white">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">

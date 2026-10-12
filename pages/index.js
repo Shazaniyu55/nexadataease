@@ -29,7 +29,7 @@ export default function Home() {
             </h1>
             <p className="mt-6 max-w-prose text-lg leading-relaxed text-ink/70">
               NexaDataEase is a Lagos-based technology company. We build the
-              products and the payment infrastructure underneath them —
+              products and the payment infrastructure underneath them 
               starting with bills, travel and interstate mobility.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wide text-ink/45">Products live</dt>
-              <dd className="mt-1 text-sm font-medium">2 apps, 1 API platform</dd>
+              <dd className="mt-1 text-sm font-medium">3 apps, 1 API platform </dd>
             </div>
           </dl>
         </div>
@@ -134,6 +134,19 @@ export default function Home() {
                       image="/images/unnamed.png"
                       imageAlt="TruBook Driver app home screen"
                    />
+
+                    <ProductPanel
+            accent="blue"
+            eyebrow="Consumer app · Airtime & GiftCard"
+            name="Ruuvoo"
+            status="Live"
+            description="Pay for airtime, mobile data, cable TV and electricity in seconds, plus buy your gift cards  at affordable prices— all from one app."
+            points={["Airtime & data", "Electricity & cable TV", "Gift Card"]}
+            detailHref="/projects/ruuvoo"
+               appUrl="https://play.google.com/store/apps/details?id=com.ruuvoo.app"
+              image="/images/ruuvoo.png"
+             imageAlt="DataEase app home screen"
+          />
         </div>
       </section>
 
