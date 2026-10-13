@@ -56,6 +56,20 @@ export default function Projects() {
              image="/images/unnamed.png"
              imageAlt="TruBook Driver app home screen"
           />
+
+
+           <ProductPanel
+                      accent="blue"
+                      eyebrow="Consumer app · Airtime & GiftCard"
+                      name="Ruuvoo"
+                      status="Live"
+                      description="Pay for airtime, mobile data, cable TV and electricity in seconds, plus buy your gift cards  at affordable prices— all from one app."
+                      points={["Airtime & data", "Electricity & cable TV", "Gift Card"]}
+                      detailHref="/projects/ruuvoo"
+                         appUrl="https://play.google.com/store/apps/details?id=com.ruuvoo.app"
+                        image="/images/ruuvoo.png"
+                       imageAlt="DataEase app home screen"
+                    />
         </div>
       </section>
 
