@@ -32,6 +32,10 @@ export default function Training() {
             <Link href="/training/login" className="rounded-sm border border-white/30 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10">
               Student login
             </Link>
+
+          <Link href="/training/courses" className="rounded-sm border border-white/30 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10">
+              Browse courses
+            </Link>
           </div>
         </div>
       </section>
@@ -74,6 +78,9 @@ export default function Training() {
         <Link href="/training/register" className="mt-6 inline-block rounded-sm bg-navy px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-navy-dark">
           Create your student account
         </Link>
+                <p className="mt-8 text-sm text-ink/60">
+          Experienced in tech? <Link href="/training/instructor/register" className="text-navy underline">Apply to teach and sell your courses</Link>
+        </p>
       </section>
     </Layout>
   );

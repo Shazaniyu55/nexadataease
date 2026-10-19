@@ -27,10 +27,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/training.js"
     ],
-    "/training/register": [
+    "/training/courses": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/training/register.js"
+      "static/chunks/pages/training/courses.js"
+    ],
+    "/training/courses/[id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/training/courses/[id].js"
+    ],
+    "/training/instructor/dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/training/instructor/dashboard.js"
+    ],
+    "/training/login": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/training/login.js"
     ]
   },
   "ampFirstPages": []

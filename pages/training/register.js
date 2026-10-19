@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import { COURSES } from "../../lib/courses";
-import { api, saveToken } from "../../lib/trainingApi";
+import { api, saveToken, safeNext } from "../../lib/trainingApi";
 
 const input = "mt-2 w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-navy";
 const label = "text-xs uppercase tracking-wide text-ink/45";
@@ -26,8 +26,7 @@ export default function Register() {
     try {
       const d = await api("/register", "POST", f);
       saveToken(d.token);
-      router.push("/training/dashboard");
-    } catch (x) { setErr(x.message); setBusy(false); }
+router.push(safeNext(router.query.next));    } catch (x) { setErr(x.message); setBusy(false); }
   }
 
   return (

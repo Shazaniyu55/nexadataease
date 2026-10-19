@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { COURSES } from "../../lib/courses";
 import { api, saveToken, clearToken, hasToken, ADMIN_KEY } from "../../lib/trainingApi";
+import Link from "next/link";
 
 const input = "mt-2 w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-navy";
 const label = "text-xs uppercase tracking-wide text-ink/45";
@@ -70,7 +71,9 @@ export default function Admin() {
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-6">
           <h1 className="text-3xl font-semibold">Training admin</h1>
           <div className="flex gap-3">
+
             <button onClick={exportCsv} className="rounded-sm border border-line px-4 py-2 text-sm hover:bg-white">Export CSV</button>
+                        <Link href="/training/admin/instructors" className="rounded-sm bg-navy px-4 py-2 text-sm text-white hover:bg-navy-dark">Instructor applications</Link>
             <button onClick={() => { clearToken(ADMIN_KEY); setData(null); }} className="rounded-sm border border-line px-4 py-2 text-sm hover:bg-white">Log out</button>
           </div>
         </div>

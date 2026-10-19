@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Layout from "../../components/Layout";
-import { api, saveToken } from "../../lib/trainingApi";
+import { api, saveToken, safeNext } from "../../lib/trainingApi";
 
 const input = "mt-2 w-full border border-line bg-paper px-3 py-2.5 text-sm outline-none focus:border-navy";
 const label = "text-xs uppercase tracking-wide text-ink/45";
@@ -20,7 +20,7 @@ export default function Login() {
     try {
       const d = await api("/login", "POST", { login, password });
       saveToken(d.token);
-      router.push("/training/dashboard");
+      router.push(safeNext(router.query.next));
     } catch (x) { setErr(x.message); setBusy(false); }
   }
 
@@ -40,8 +40,8 @@ export default function Login() {
             {busy ? "Logging in…" : "Log in"}
           </button>
         <p className="text-sm text-ink/60">
-            New here? <Link href="/training/register" className="text-navy underline">Register</Link>
-            {" · "}<Link href="/training/forgot" className="text-navy underline">Forgot password?</Link>
+            New here? <Link href={{ pathname: "/training/register", query: router.query.next ? { next: router.query.next } : {} }} className="text-navy underline">Register</Link>
+            {" · "}<Link href={{ pathname: "/training/forgot", query: router.query.next ? { next: router.query.next } : {} }} className="text-navy underline">Forgot password?</Link>
           </p>
         </form>
       </section>

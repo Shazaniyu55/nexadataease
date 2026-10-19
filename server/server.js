@@ -25,7 +25,8 @@ const CBT_MINUTES = 10, MAX_ATTEMPTS = 2, PASS_MARK = 50, GRACE_MS = 60 * 1000;
 const app = express();
 app.set("trust proxy", 1);
 app.use(cors({ origin: ORIGINS.includes("*") ? true : ORIGINS }));
-app.use(express.json());
+//app.use(express.json());
+app.use(express.json({ verify: (req, res, buf) => { req.rawBody = buf; } })); // rawBody is needed to check Paystack webhook signatures
 
 /* course id -> number of lessons. Keep in sync with lib/courses.js on the frontend. */
 const LESSON_COUNT = { web: 6, data: 6, mobile: 6, uiux: 6 };
@@ -247,6 +248,8 @@ app.post("/api/admin/cbt", adminAuth, h(async (req, res) => {
   res.json({ cbtOpen: doc.cbtOpen });
 }));
 
+/* ---- instructors, courses, Cloudinary, Paystack ---- */
+require("./marketplace")(app, { h, limit, auth, adminAuth, sendMail, SECRET, CLIENT_URL });
 /* ---- errors + start ---- */
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   console.error(err);

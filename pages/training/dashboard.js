@@ -4,9 +4,10 @@ import Layout from "../../components/Layout";
 import { COURSES } from "../../lib/courses";
 import { api, clearToken } from "../../lib/trainingApi";
 import CbtPanel from "../../components/training/CbtPanel";
+import MyCourses from "../../components/training/MyCourses";
 
-const TABS = [["overview", "Overview"], ["learning", "My learning"], ["cbt", "CBT"]];
-
+// const TABS = [["overview", "Overview"], ["learning", "My learning"], ["cbt", "CBT"]];
+const TABS = [["overview", "Overview"], ["learning", "My learning"], ["courses", "My courses"], ["cbt", "CBT"]];
 function Bar({ pct }) {
   return (
     <div className="h-2 w-full bg-line" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
@@ -108,7 +109,7 @@ export default function Dashboard() {
                 </ul>
               </div>
             )}
-
+            {tab === "courses" && <MyCourses />}
             {tab === "cbt" && <CbtPanel />}
           </div>
         </div>
