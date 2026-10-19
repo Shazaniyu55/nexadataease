@@ -2,8 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/training/instructor/dashboard": "pages/training/instructor/dashboard.js",
-  "/training": "pages/training.js",
   "/training/courses": "pages/training/courses.js",
   "/training/courses/[id]": "pages/training/courses/[id].js",
   "/training/login": "pages/training/login.js"
