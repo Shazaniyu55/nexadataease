@@ -35,6 +35,8 @@ export default function Footer() {
                   info@nexadataease.com
                 </a>
               </li>
+              <li className="text-white/50">+2349074235666</li>
+
               <li className="text-white/50">10 Kunene Street, Maitama, Maitama, 904101, Nigeria</li>
             </ul>
           </div>
